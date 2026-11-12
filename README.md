@@ -237,7 +237,11 @@
 | нет учеников школы 50 | сообщение «Нет учеников из школы №50» |
 | файл пустой или удалён вручную | сообщение об ошибке / файл создаётся заново |
 
-![Задание 5](screenshots/task5.png)
+<img width="480" height="98" alt="5 2" src="https://github.com/user-attachments/assets/763f2a91-e469-4ba4-a1db-585645c24680" />
+<img width="596" height="343" alt="5 22" src="https://github.com/user-attachments/assets/c6897364-0f2e-4b78-adb4-25b8c3f53879" />
+<img width="553" height="123" alt="5 1" src="https://github.com/user-attachments/assets/05b64b60-1ea1-4bef-8cd4-a04caf2f7071" />
+<img width="619" height="376" alt="5 11" src="https://github.com/user-attachments/assets/0fdf6660-ebdb-40db-a984-5cf4aa5ff4ea" />
+
 
 ---
 
