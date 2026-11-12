@@ -41,7 +41,11 @@
 | `1 a 3` | сообщение «a — не целое число», ввод повторяется |
 | пустая строка | сообщение «Список не может быть пустым» |
 
-![Задание 1](screenshots/task1.png)
+<img width="480" height="78" alt="1 2" src="https://github.com/user-attachments/assets/1e117df5-8bca-4f62-b222-3e94a04f7022" />
+<img width="514" height="82" alt="1 1" src="https://github.com/user-attachments/assets/866a12d1-e749-4d41-a689-0261ff06fd8b" />
+<img width="464" height="143" alt="1 4" src="https://github.com/user-attachments/assets/f1c40f55-568d-45c1-b9f8-e478f4f0ee76" />
+<img width="489" height="72" alt="1 3" src="https://github.com/user-attachments/assets/8523ff88-ece3-4f08-a3c1-5cab1a21106b" />
+
 
 ---
 
@@ -76,7 +80,10 @@
 | `4 2 4` | `4, 2, 4` (соседи равны — ничего не меняется) |
 | `2 1 3` | `2, 1, 3` (у первого элемента нет левого соседа) |
 
-![Задание 2](screenshots/task2.png)
+<img width="465" height="109" alt="2 3" src="https://github.com/user-attachments/assets/1192007c-1164-42aa-beaf-c9eb15b65555" />
+<img width="462" height="115" alt="2 2" src="https://github.com/user-attachments/assets/17c47040-cbe3-4c58-8d67-110ae47edc07" />
+<img width="468" height="104" alt="2 1" src="https://github.com/user-attachments/assets/4fa03f0c-6df9-471d-bb40-d1abca71d58c" />
+
 
 ---
 
@@ -115,7 +122,8 @@
 
 Дополнительно проверено: ввод языка не из перечня (пропускается), ввод нуля или отрицательного числа там, где нужно положительное (повторный запрос), работник, не знающий ни одного языка.
 
-![Задание 3](screenshots/task3.png)
+<img width="421" height="537" alt="3 1" src="https://github.com/user-attachments/assets/74c38e4f-2dd0-457c-81a1-0d232c2e367e" />
+
 
 ---
 
@@ -148,7 +156,10 @@
 | `Привет, мир!` | `п, м` |
 | пустая строка | сообщение «Строка не может быть пустой» |
 
-![Задание 4](screenshots/task4.png)
+<img width="541" height="124" alt="4 3" src="https://github.com/user-attachments/assets/6960d1d7-f3f6-4f1a-bd80-77d823d0f175" />
+<img width="410" height="133" alt="4 2" src="https://github.com/user-attachments/assets/c95df8f1-861f-4875-b1f3-4fb6fa0069cc" />
+<img width="582" height="77" alt="4 1" src="https://github.com/user-attachments/assets/0f068eca-c316-40a7-a64d-02158113dd01" />
+
 
 ---
 
@@ -268,7 +279,12 @@
 
 Также проверен ввод некорректных данных (буквы, часы 25, минуты 60, пункт меню) — программа просит ввести заново.
 
-![Задание 6](screenshots/task6.png)
+<img width="473" height="477" alt="6 5" src="https://github.com/user-attachments/assets/8d8f4f08-8e9f-4edf-8024-435d98078b31" />
+<img width="387" height="266" alt="6 4" src="https://github.com/user-attachments/assets/793b3cbb-806e-4ff7-a03b-b97b043b80cd" />
+<img width="415" height="407" alt="6 3" src="https://github.com/user-attachments/assets/54a59387-9417-4559-a173-60c3c45460d1" />
+<img width="387" height="415" alt="6 2" src="https://github.com/user-attachments/assets/a6bd5ccb-a710-4e47-b0ac-c26f0333798e" />
+<img width="469" height="405" alt="6 1" src="https://github.com/user-attachments/assets/b1a72f4e-dc51-4074-80b3-d77d3c15b05e" />
+
 
 ---
 
@@ -332,4 +348,12 @@
 | `Time + uint` | 22:30 + 1500 | 23:30 |
 | `Time + Time` | 15:40 + 10:30 | 02:10 |
 
-![Задание 7](screenshots/task7.png)
+<img width="1513" height="331" alt="7" src="https://github.com/user-attachments/assets/e5ccc547-bbb3-4a59-9f21-db67d9c5ef01" />
+<img width="504" height="401" alt="7 7" src="https://github.com/user-attachments/assets/8db35577-a6c7-4358-8478-4af407cd7c09" />
+<img width="467" height="394" alt="7 6" src="https://github.com/user-attachments/assets/186b1e68-e0f9-423e-be03-407231da5478" />
+<img width="445" height="382" alt="7 5" src="https://github.com/user-attachments/assets/964019d1-e995-437c-860e-13ba6a3c12eb" />
+<img width="437" height="324" alt="7 4" src="https://github.com/user-attachments/assets/dc5205df-3a2d-4a38-b032-99b8069abc0a" />
+<img width="435" height="324" alt="7 3" src="https://github.com/user-attachments/assets/5df39ecc-eef9-40a6-bf15-cdb352615de2" />
+<img width="436" height="341" alt="7 2" src="https://github.com/user-attachments/assets/0197cf00-42ab-440b-a477-733ff55ae5de" />
+<img width="409" height="441" alt="7 1" src="https://github.com/user-attachments/assets/4e315954-7332-46da-904b-5d0832fe7cf2" />
+
