@@ -289,11 +289,12 @@
 
 Также проверен ввод некорректных данных (буквы, часы 25, минуты 60, пункт меню) — программа просит ввести заново.
 
-<img width="473" height="477" alt="6 5" src="https://github.com/user-attachments/assets/8d8f4f08-8e9f-4edf-8024-435d98078b31" />
-<img width="387" height="266" alt="6 4" src="https://github.com/user-attachments/assets/793b3cbb-806e-4ff7-a03b-b97b043b80cd" />
-<img width="415" height="407" alt="6 3" src="https://github.com/user-attachments/assets/54a59387-9417-4559-a173-60c3c45460d1" />
-<img width="387" height="415" alt="6 2" src="https://github.com/user-attachments/assets/a6bd5ccb-a710-4e47-b0ac-c26f0333798e" />
-<img width="469" height="405" alt="6 1" src="https://github.com/user-attachments/assets/b1a72f4e-dc51-4074-80b3-d77d3c15b05e" />
+<img width="339" height="214" alt="image" src="https://github.com/user-attachments/assets/337c17e3-e8d6-43ed-a3e7-0266ff39bf4a" />
+<img width="267" height="188" alt="image" src="https://github.com/user-attachments/assets/bad9b04c-6116-4032-9a38-131b3f67d99c" />
+<img width="230" height="156" alt="image" src="https://github.com/user-attachments/assets/357dca57-acc4-4eb2-8829-1e4834373356" />
+<img width="236" height="158" alt="image" src="https://github.com/user-attachments/assets/24c8376d-e91a-4df4-a7c8-e0e011b00c2a" />
+<img width="259" height="156" alt="image" src="https://github.com/user-attachments/assets/4bd2ef06-2cb2-48b7-a805-aafc39f342dd" />
+
 
 
 ---
