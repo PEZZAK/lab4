@@ -5,10 +5,13 @@ using System.Linq;
 
 namespace Lab4Tasks
 {
+    /// <summary>
+    /// Статический класс с решениями заданий 1–5 (вариант 14).
+    /// </summary>
     public static class Lab4Tasks
     {
         // ================================================================
-        // ЗАДАНИЕ 1 (List)
+        // ЗАДАНИЕ 1 (List), вариант 14:
         // Оставить в списке только первые вхождения одинаковых элементов.
         // ================================================================
         public static void Task1()
@@ -48,7 +51,7 @@ namespace Lab4Tasks
         }
 
         // ================================================================
-        // ЗАДАНИЕ 2 (LinkedList)
+        // ЗАДАНИЕ 2 (LinkedList), вариант 14:
         // Если у элемента E «соседи» не равны, заменить на F.
         // ================================================================
         public static void Task2()
@@ -93,7 +96,7 @@ namespace Lab4Tasks
         }
 
         // ================================================================
-        // ЗАДАНИЕ 3 (HashSet)
+        // ЗАДАНИЕ 3 (HashSet), вариант 14:
         // Языки: какие знает каждый работник, какие хотя бы один, какие никто.
         // ================================================================
         public static void Task3()
@@ -104,7 +107,8 @@ namespace Lab4Tasks
             HashSet<string> allLanguages = new HashSet<string>();
             for (int i = 1; i <= languageCount; i++)
             {
-                string language = ReadNonEmptyString($"Название языка {i}: ");
+                // Используем ReadLettersOnly (запрет цифр)
+                string language = ReadLettersOnly($"Название языка {i}: ");
                 allLanguages.Add(language);
             }
 
@@ -118,7 +122,8 @@ namespace Lab4Tasks
                 HashSet<string> known = new HashSet<string>();
                 for (int j = 1; j <= knownCount; j++)
                 {
-                    string language = ReadNonEmptyString($"  Язык {j}: ");
+                    // Используем ReadLettersOnly (запрет цифр)
+                    string language = ReadLettersOnly($"  Язык {j}: ");
                     if (!allLanguages.Contains(language))
                     {
                         Console.WriteLine("  Такого языка нет в перечне, пропускаем.");
@@ -194,13 +199,15 @@ namespace Lab4Tasks
         }
 
         // ================================================================
-        // ЗАДАНИЕ 4 (HashSet)
+        // ЗАДАНИЕ 4 (HashSet), вариант 14:
         // С каких букв начинаются слова? (без алфавитного порядка)
         // ================================================================
         public static void Task4()
         {
             Console.WriteLine("Задание 4: с каких букв начинаются слова?");
-            string text = ReadNonEmptyString("Введите текст на русском языке: ");
+
+            // Используем ReadTextOnly для запрета цифр в тексте
+            string text = ReadTextOnly("Введите текст на русском языке: ");
 
             HashSet<char> firstLetters = FirstLettersOfWords(text);
 
@@ -233,7 +240,7 @@ namespace Lab4Tasks
         }
 
         // ================================================================
-        // ЗАДАНИЕ 5
+        // ЗАДАНИЕ 5, вариант 14:
         // Два ученика школы №50, которые лучше всех сдали информатику.
         // Данные берутся из текстового файла "students.txt".
         // ================================================================
@@ -241,15 +248,24 @@ namespace Lab4Tasks
         {
             Console.WriteLine("Задание 5: лучшие ученики школы №50.");
 
+            // Имя текстового файла
             string fileName = "students.txt";
             string filePath = Path.Combine(AppContext.BaseDirectory, fileName);
+
+            // Создаем файл отдельным методом, если его нет
             if (!File.Exists(filePath))
             {
                 CreateStudentsFile(filePath);
                 Console.WriteLine($"Создан исходный файл: {fileName}");
             }
+
+            // Читаем и обрабатываем файл
             FindTopTwoSchool50FromFile(filePath);
         }
+
+        /// <summary>
+        /// Отдельный метод для заполнения исходного файла данными.
+        /// </summary>
         public static void CreateStudentsFile(string path)
         {
             string[] lines =
@@ -268,6 +284,9 @@ namespace Lab4Tasks
             File.WriteAllLines(path, lines);
         }
 
+        /// <summary>
+        /// Читает файл, парсит данные с проверками (на случай битого файла).
+        /// </summary>
         private static void FindTopTwoSchool50FromFile(string path)
         {
             if (!File.Exists(path))
@@ -303,6 +322,8 @@ namespace Lab4Tasks
                 if (string.IsNullOrEmpty(line)) continue;
 
                 string[] parts = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                // Валидация формата: ровно 4 элемента
                 if (parts.Length != 4) continue;
 
                 if (int.TryParse(parts[2], out int school) &&
@@ -366,6 +387,7 @@ namespace Lab4Tasks
                 }
             }
 
+            // Вывод согласно условию задачи
             if (top1.Count > 1)
             {
                 Console.WriteLine($"\nНаибольший балл набрали более двух человек: {top1.Count}");
@@ -393,7 +415,7 @@ namespace Lab4Tasks
         }
 
         // ================================================================
-        // ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ВВОДА
+        // ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ВВОДА С ПРОВЕРКАМИ
         // ================================================================
 
         private static string ReadNonEmptyString(string message)
@@ -408,6 +430,85 @@ namespace Lab4Tasks
                 }
                 Console.WriteLine("Строка не может быть пустой.");
             }
+        }
+
+        private static string ReadLettersOnly(string message)
+        {
+            while (true)
+            {
+                Console.Write(message);
+                string input = Console.ReadLine();
+
+                if (input == null || input.Trim() == "")
+                {
+                    Console.WriteLine("Строка не может быть пустой.");
+                    continue;
+                }
+
+                input = input.Trim();
+
+                if (!IsLettersOnly(input))
+                {
+                    Console.WriteLine("Ошибка: допускаются только буквы (и, возможно, дефис).");
+                    continue;
+                }
+
+                return input;
+            }
+        }
+
+        private static string ReadTextOnly(string message)
+        {
+            while (true)
+            {
+                Console.Write(message);
+                string input = Console.ReadLine();
+
+                if (input == null || input.Trim() == "")
+                {
+                    Console.WriteLine("Текст не может быть пустым.");
+                    continue;
+                }
+
+                input = input.Trim();
+
+                if (input.Any(char.IsDigit))
+                {
+                    Console.WriteLine("Ошибка: текст не должен содержать цифр.");
+                    continue;
+                }
+
+                return input;
+            }
+        }
+
+        private static bool IsLettersOnly(string input)
+        {
+            bool hasLetter = false;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                char c = input[i];
+
+                if (char.IsLetter(c))
+                {
+                    hasLetter = true;
+                    continue;
+                }
+
+                if (c == '-')
+                {
+                    if (i == 0 || i == input.Length - 1)
+                    {
+                        return false;
+                    }
+                    continue;
+                }
+
+                return false;
+            }
+
+            return hasLetter;
         }
 
         private static int ReadInt(string message)
